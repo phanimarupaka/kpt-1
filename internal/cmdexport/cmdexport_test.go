@@ -353,7 +353,7 @@ func (t *TestCase) ReplaceDIRMacro() error {
 
 	var params []string
 	for _, param := range t.params {
-		param = strings.Replace(param, "{DIR}", cwd, -1)
+		param = strings.Replace(param, "{DIR}", cwd, -1) //nolint: gocritic
 
 		params = append(params, param)
 	}

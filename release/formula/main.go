@@ -72,7 +72,7 @@ func getSha(version string) string {
 		"https://github.com/GoogleContainerTools/kpt/archive/" + version + ".tar.gz")
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "%v", err)
-		os.Exit(1)
+		os.Exit(1) //nolint:gocritic
 	}
 	defer resp.Body.Close()
 

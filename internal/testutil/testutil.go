@@ -200,6 +200,7 @@ func Replace(t *testing.T, path, old, new string) {
 		t.FailNow()
 	}
 	// update the expected contents to reflect the set command
+	//nolint:gocritic
 	b = []byte(strings.Replace(
 		string(b), old, new, -1))
 	if !assert.NoError(t, ioutil.WriteFile(path, b, 0)) {
