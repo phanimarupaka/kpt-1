@@ -115,7 +115,6 @@ cd hello-world
 {{% /hide %}}
 
 <!--mdtogo:Examples-->
-<!-- @pkgDiff @verifyExamples-->
 ```shell
 # Show changes in current package relative to upstream source package.
 kpt pkg diff
@@ -127,14 +126,12 @@ kpt pkg diff
 kpt pkg diff --diff-tool meld --diff-tool-opts "-a"
 ```
 
-<!-- @pkgDiff @verifyExamples-->
 ```shell
 # Show changes in upstream source package between current version and
 # target version.
 kpt pkg diff @v0.4.0 --diff-type remote
 ```
 
-<!-- @pkgDiff @verifyExamples-->
 ```shell
 # Show changes in current package relative to target version.
 kpt pkg diff @v0.4.0 --diff-type combined
